@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şifre Göster/Gizle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <input type="password" placeholder="Şifrenizi Yazınız" id="password">
+        <div id="toggle" onclick="showHidePass();"></div>
+    </div>
+
+    <script>
+        var password = document.getElementById("password");
+        var toggle = document.getElementById("toggle");
+
+        function showHidePass() {
+            if (password.type === "password") {
+                password.setAttribute('type', 'text');
+                toggle.classList.add('hide');
+            } else {
+                password.setAttribute('type', 'password');
+                toggle.classList.remove('hide');
+            }
+        }
+    </script>
+</body>
+</html>

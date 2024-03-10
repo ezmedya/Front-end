@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pepsi Web Sitesi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="section">
+        <header>
+            <a href="#"><img src="img/logo.png" alt="Logo"></a>
+            <ul>
+                <li><a href="#">Anasayfa</a></li>
+                <li><a href="#">Ürünler</a></li>
+                <li><a href="#">Yenilikler</a></li>
+                <li><a href="#">Haber Bülteni</a></li>
+                <li><a href="#">İletişim</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="text">
+                <h2>Yeni Pepsileri <br> <span>Denediniz Mi?</span></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Cras rutrum nulla vitae leo facilisis, et elementum lorem gravida.
+                    Fusce mollis convallis interdum.</p>
+                <a href="#">Tüm Ürünleri Gör</a>
+            </div>
+            <div class="imageBox">
+                <img src="img/pepsi1.png" class="pepsi">
+            </div>
+        </div>
+        <ul class="imageThumb">
+            <li><img src="img/pepsi1.png" onclick="changeImg('img/pepsi1.png'); changeBackground('#0062be')" ></li>
+            <li><img src="img/pepsi2.png" onclick="changeImg('img/pepsi2.png'); changeBackground('#e60c2c')" ></li>
+            <li><img src="img/pepsi3.png" onclick="changeImg('img/pepsi3.png'); changeBackground('#1e1e1e')" ></li>
+        </ul>
+        <ul class="social">
+            <li><a href="#"><img src="img/facebook.png"></a></li>
+            <li><a href="#"><img src="img/twitter.png"></a></li>
+            <li><a href="#"><img src="img/instagram.png"></a></li>
+        </ul>
+    </section>
+
+    <script>
+        function changeImg(newSrc) {
+            document.querySelector(".pepsi").src = newSrc;
+        }
+
+        function changeBackground(newColor) {
+            var section = document.querySelector(".section");
+            section.style.background = newColor;
+        }
+    </script>
+</body>
+</html>

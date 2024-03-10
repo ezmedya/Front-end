@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphine Slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="title">Alphine Slider</h1>
+    <div class="slider" x-data="{start: true, end:false}">
+        <div class="slider__content" x-ref="slider" x-on:scroll.debounce="$refs.slider.scrollLeft==0 ? 
+        start = true : start = false;
+        Math.abs(($refs.slider.scrollWidth - $refs.slider.offsetWidth) - $refs.slider.scrollLeft) < 5 ? end = true : end = false;">
+    
+        <div class="slider__item">
+            <img class="slider__image" src="photo.avif" alt="image">
+            <div class="slider__info">
+                <h2>Resim 1</h2>
+            </div>
+        </div>
+        
+        <div class="slider__item">
+            <img class="slider__image" src="photo1.avif" alt="image">
+            <div class="slider__info">
+                <h2>Resim 2</h2>
+            </div>
+        </div>
+        <div class="slider__item">
+            <img class="slider__image" src="photo2.avif" alt="image">
+            <div class="slider__info">
+                <h2>Resim 3</h2>
+            </div>
+        </div>
+
+        <div class="slider__item">
+            <img class="slider__image" src="photo3.avif" alt="image">
+            <div class="slider__info">
+                <h2>Resim 4</h2>
+            </div>
+        </div>
+
+        <div class="slider__item">
+            <img class="slider__image" src="photo4.avif" alt="image">
+            <div class="slider__info">
+                <h2>Resim 5</h2>
+            </div>
+        </div>
+
+        <div class="slider__item">
+            <img class="slider__image" src="photo5.avif" alt="image">
+            <div class="slider__info">
+                <h2>Resim 6</h2>
+            </div>
+        </div>
+
+        <div class="slider__item">
+            <img class="slider__image" src="photo4.avif" alt="image">
+            <div class="slider__info">
+                <h2>Resim 5</h2>
+            </div>
+        </div>
+
+        <div class="slider__item">
+            <img class="slider__image" src="photo5.avif" alt="image">
+            <div class="slider__info">
+                <h2>Resim 6</h2>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="logo.png" class="logo"></a>
+            <ul>
+                <li><a href="#">Ana Sayfa</a></li>
+                <li><a href="#">Menü</a></li>
+                <li><a href="#">Yeni Gelenler</a></li>
+                <li><a href="#">İletişim</a></li>
+            </ul>
+        </header>
+
+        <div class="content">
+            <div class="textBox">
+                <h2>Sadece Kahve Değil <br> Bu <span>Starbucks</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quibusdam dolor, cupiditate obcaecati maxime natus ratione architecto itaque suscipit, sint voluptate omnis blanditiis minima perferendis! Sapiente voluptatum sint numquam commodi?</p>
+                <a href="#"> Daha Fazlası</a>
+            </div>
+            <div class="imgBox">
+                <img src="img1.png" class="starbucks">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="thumb1.png" onclick="imgSlider('img1.png'); changeCircle('#017143')"></li>
+            <li><img src="thumb2.png" onclick="imgSlider('img2.png'); changeCircle('#eb7495')"></li>
+            <li><img src="thumb3.png" onclick="imgSlider('img3.png'); changeCircle('#d752b1')"></li>
+        </ul> 
+
+        <ul class="social">
+            <li><a href="#"><img src="facebook.png"></a></li>
+            <li><a href="#"><img src="instagram.png"></a></li>
+            <li><a href="#"><img src="twitter.png"></a></li>
+        </ul> 
+        
+    </section>
+
+    <script type="text/javascript">
+
+        function imgSlider(anything){
+            document.querySelector('.starbucks').src = anything;
+        }
+
+        function changeCircle(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header" id="header">
+        <nav>
+            <img src="images/tesla-logo.png" class="logo">
+            <ul>
+                <li>
+                    <a href="#" id="models">Model S</a>
+                </li>
+                <li>
+                    <a href="#" id="model3">Model 3</a>
+                </li>
+                <li>
+                    <a href="#" id="modelx">Model X</a>
+                </li>
+                <li>
+                    <a href="#" id="modely">Model Y</a>
+                </li>
+            </ul>
+            <a href="#" class="btn">Contact Us</a>
+        </nav>
+
+        <div class="info">
+            <div>
+                <h2>1.9s</h2>
+                <p>60 mph</p>
+            </div>
+            <div>
+                <h2>200 mph</h2>
+                <p>top speed</p>
+            </div>
+            <div>
+                <h2>396 mi</h2>
+                <p>max range</p>
+            </div>
+            <div class="line"></div>
+            <div>
+                <h2 id="model">
+                    Model S
+                </h2>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var header = document.getElementById("header");
+        var models = document.getElementById("models");
+        var model3 = document.getElementById("model3");
+        var modelx = document.getElementById("modelx");
+        var modely = document.getElementById("modely");
+        var model = document.getElementById("model");
+
+        models.onclick = function () {
+            header.style.backgroundImage = "url(images/model-s.jpg)";
+            model.innerHTML = "Model S"
+        }
+        model3.onclick = function () {
+            header.style.backgroundImage = "url(images/model-3.jpg)";
+            model.innerHTML = "Model 3"
+        }
+        modelx.onclick = function () {
+            header.style.backgroundImage = "url(images/model-x.jpg)";
+            model.innerHTML = "Model X"
+        }
+        modely.onclick = function () {
+            header.style.backgroundImage = "url(images/model-y.jpg)";
+            model.innerHTML = "Model Y"
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>QR Kod Oluşturucu</h1>
+            <p>URL veya metin girerek QR kod oluşturun.</p>
+        </header>
+        <div class="form">
+            <input type="text" placeholder="URL veya metin giriniz">
+            <button>QR Kod Oluştur</button>
+        </div>
+        <div class="qr-code">
+            <img src="">
+        </div>
+    </div>
+
+    <script>
+        const container = document.querySelector('.container'),
+            qrInput = document.querySelector('.form input'),
+            generateBtn = document.querySelector('.form button'),
+            qrImg = document.querySelector('.qr-code img');
+
+        var preValue;
+
+        generateBtn.addEventListener('click', function () {
+            var qrValue = qrInput.value.trim();
+            if (!qrValue || preValue === qrValue) return;
+            preValue = qrValue;
+            generateBtn.innerText = 'QR kod oluşturuluyor...';
+            qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${qrValue}`;
+            qrImg.addEventListener('load', function () {
+                container.classList.add('active');
+                generateBtn.innerText = 'QR Kod Oluştur';
+            });
+        });
+
+        qrInput.addEventListener('keyup', function () {
+            if (!qrInput.value.trim()) {
+                container.classList.remove('active');
+                preValue = '';
+            }
+        });
+    </script>
+</body>
+
+</html>

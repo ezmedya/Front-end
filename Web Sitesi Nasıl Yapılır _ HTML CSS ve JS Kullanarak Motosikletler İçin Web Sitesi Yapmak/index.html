@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container" id="bike">
+        <nav>
+            <img src="img/logo.png" class="logo">
+            <a href="#" class="btn">Test Sürüşü</a>
+        </nav>
+
+        <div class="content">
+            <h2>
+                BMW
+            </h2>
+            <h1>
+                M 1000 RR
+            </h1>
+            <p>
+                Kişiliğinizin rekabetçi yönü sizi cesaretlendirir. Tutkunuz size hakim olur ve size meydan okur. Her
+                milisaniye daha fazlası için arayışta olmak demektir. İşte gerçek motor sporları. Yüksek performans,
+                yüksek
+                teknoloji ürünü malzemeler, en yüksek kalitede işçilik ve en ince detayına kadar ayrıcalık: Yeni M RR
+                BMW
+                Motorrad’ın sunduğu ilk M modelidir. Genlerini doğrudan profesyonel yarışlardan alır.
+            </p>
+            <h3>Renk seçiniz</h3>
+            <div class="colour-select">
+                <img src="img/renk1.png" id="renk1">
+                <img src="img/renk2.png" id="renk2">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var bike = document.getElementById("bike");
+        var renk1 = document.getElementById("renk1");
+        var renk2 = document.getElementById("renk2"); 
+        
+        renk1.onclick = function () {
+            bike.style.backgroundImage = "url(img/bmw1.jpg)";
+        }
+        renk2.onclick = function () {
+            bike.style.backgroundImage = "url(img/bmw2.jpg)";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .top {
+  height: 65vh;
+  width: 100vw;
+  background: radial-gradient(circle, #00c7be, #0a20ff);
+}
+
+body .bottom {
+  height: 35vh;
+  width: 100vw;
+  background: radial-gradient(circle, #00c7be, #0a20ff);
+}
+
+.imgwatch {
+  position: absolute;
+  margin-top: -175px;
+}
+
+.imgwatch img {
+  width: 600px;
+  -webkit-box-reflect: below -45px linear-gradient(transparent, rgba(255, 255, 255, 0.8));
+}
+/*# sourceMappingURL=style.css.map */

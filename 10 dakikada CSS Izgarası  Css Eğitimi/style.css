@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body{
+    background-color: #202028;
+    color: #fff;
+}
+
+.container-fuild{
+    width: 1200px;
+    max-width: 100%;
+    margin: auto;
+}
+
+h1{
+    text-align: center;
+    font-family: 'lobster';
+}
+
+footer{
+    padding: 50px 0;
+    text-align: center;
+    background-color: #1c1f24;
+}
+
+footer ul{
+    padding: 0;
+    list-style: none;
+}
+
+footer li{
+    padding: 20px;
+    display: inline-block;
+}
+
+.item{
+    position: relative;
+    overflow: hidden;
+}
+
+.item img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 300px 300px 300px 300px 300px 300px;
+}
+
+.item:nth-child(1){
+    grid-column-start:1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.item:nth-child(4){
+    grid-column-start:3;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+.item:nth-child(7){
+    grid-column-start:1;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 7;
+}
+
+.item .content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: #0000005C;
+    opacity: 0;
+    transform: translate(0,100px);
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item:hover .content{
+    opacity: 1;
+    transform: translate(0,0);
+}

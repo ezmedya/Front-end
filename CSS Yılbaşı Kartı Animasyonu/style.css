@@ -1,0 +1,162 @@
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.christmas-card {
+  overflow: hidden;
+  position: relative;
+  width: 350px;
+  height: 400px;
+  background-color: #9ceaef;
+  box-shadow: 15px 1px 50px rgba(0, 0, 0, 0.2);
+}
+
+.christmas-card:before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 150px;
+  background-color: white;
+  border-radius: 50%;
+  top: 290px;
+  left: -25px;
+  box-shadow: -130px -10px #f8f9fa, 80px -20px #e9ecef;
+}
+
+.christmas-card:after {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100px;
+  height: 20px;
+  border-radius: 50%;
+  top: 300px;
+  left: 120px;
+}
+
+.christmas-tree {
+  position: relative;
+  width: 20px;
+  height: 40px;
+  background-color: #bc6c47;
+  top: 270px;
+  left: 160px;
+  box-shadow: inset 0 25px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.christmas-tree:before {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-color: transparent transparent #8fb440 transparent;
+  border-width: 0 50px 60px 50px;
+  height: 0;
+  width: 0;
+  top: -40px;
+  left: -40px;
+  filter: drop-shadow(0 -30px #8fb440) drop-shadow(0 -30px #8fb440);
+}
+
+.christmas-tree:after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #ae2012;
+  border-radius: 50%;
+  box-shadow: -25px -20px #e9d8a6, 35px -30px #0a9396, 10px -40px #ee9b00,
+    -15px -60px #ae2012, 25px -70px #e9d8a6, 0px -85px #0a9396;
+  animation: light 3s linear infinite 3s;
+}
+
+@keyframes light {
+  0%,
+  20%,
+  40%,
+  60%,
+  80%,
+  100% {
+    box-shadow: -25px -20px #e9d8a6, 35px -30px #0a9396, 10px -40px #ee9b00,
+      -15px -60px #ae2012, 25px -70px #e9d8a6, 0px -85px #0a9396;
+    background-color: #ae2012;
+  }
+  10%,
+  30%,
+  50%,
+  700%,
+  90% {
+    box-shadow: -25px -20px #0a9396, 35px -30px #ee9b00, 10px -40px #0a9396,
+      -15px -60px #ee9b00, 25px -70px #ae2012, 0px -85px #e9d8a6;
+    background-color: #e9d8a6;
+  }
+}
+
+.snow,
+.snow:before {
+  position: absolute;
+  background-color: white;
+  width: 8px;
+  height: 8px;
+  top: -50px;
+  border-radius: 50%;
+  box-shadow: 30px -40px white, 100px 10px white, 150px -10px white,
+    200px -20px white, 300px -30px white, 40pc -20px white, 330px 10px white;
+  filter: drop-shadow(0 -100px white) drop-shadow(-20px -150px white);
+  animation: fall 5s linear infinite 2s;
+}
+
+.snow {
+  opacity: 0.7s;
+}
+
+.snow::before {
+  content: "";
+  opacity: 0.5s;
+  animation-delay: 4.5s;
+}
+
+@keyframes fall {
+  0% {
+    top: -50px;
+  }
+  100% {
+    top: 400px;
+  }
+}
+
+.wishes {
+  color: white;
+  position: relative;
+  width: 350px;
+}
+
+.merry {
+  position: relative;
+  overflow: hidden;
+  top: 0;
+  height: 30px;
+}
+
+.merry::before {
+  text-align: center;
+  width: 350px;
+  position: absolute;
+  content: "MUTLU YILLAR";
+  font-size: 30px;
+  top: 30px;
+  animation: slideUp ease 0.4s forwards 0.4s;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-30px);
+        opacity: 1;
+    }
+}

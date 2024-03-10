@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Fotoğraf Filtreleme</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <ul>
+                <li class="link active" data-filter="all">Hepsi</li>
+                <li class="link" data-filter="cay">Çay</li>
+                <li class="link" data-filter="kahve">Kahve</li>
+                <li class="link" data-filter="portakalsuyu">Portakal Suyu</li>
+            </ul>
+            <div class="images">
+                <div class="imgBox cay"><img src="img/cay1.webp"></div>
+                <div class="imgBox cay"><img src="img/cay2.webp"></div>
+                <div class="imgBox cay"><img src="img/cay3.webp"></div>
+                <div class="imgBox kahve"><img src="img/kahve1.webp"></div>
+                <div class="imgBox kahve"><img src="img/kahve2.webp"></div>
+                <div class="imgBox portakalsuyu"><img src="img/portakalsuyu1.webp"></div>
+                <div class="imgBox portakalsuyu"><img src="img/portakalsuyu2.webp"></div>
+                <div class="imgBox portakalsuyu"><img src="img/portakalsuyu3.webp"></div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+        <script>
+            $(function() {
+                $(".link").click(function () {
+                    var value = $(this).attr("data-filter");
+                    if (value == "all") {
+                        $(".imgBox").show(500);
+                    } else {
+                        $(".imgBox").not("." + value).hide(500);
+                        $(".imgBox").filter("." + value).show(500);
+                    }
+
+                    $(this).addClass("active").siblings().removeClass("active");
+                });
+            });
+        </script>
+    </body>
+</html>

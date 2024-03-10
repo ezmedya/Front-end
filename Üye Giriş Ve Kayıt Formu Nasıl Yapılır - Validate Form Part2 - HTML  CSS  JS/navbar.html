@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validate form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="form-container register-container">
+        <form action="">
+          <h1>Burdan Kaydolun</h1>
+          <div class="form-control">
+            <input type="text" id="username" placeholder="Adınız">
+            <small id="username-error"></small>
+            <span></span>
+          </div>
+          <div class="form-control">
+            <input type="email" id="email" placeholder="Email">
+            <small id="email-error"></small>
+            <span></span>
+          </div>
+          <div class="form-control">
+            <input type="password" id="password" placeholder="Şifreniz">
+            <small id="password-error"></small>
+            <span></span>
+          </div>
+          <button type="submit" value="submit"> Kayıt Ol</button>
+          <span>veya hesabınızı kullanın</span>
+          <div class="social-container">
+            <a href="" class="social"><i class="fa-brands fa-facebook"></i></a>
+            <a href="" class="social"><i class="fa-brands fa-google"></i></a>
+            <a href="" class="social"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </form>
+      </div>
+
+      <div class="form-container login-container">
+        <form action="" class="form-lg">
+          <h1>Giriş Yapın.</h1>
+          <div class="form-control2">
+            <input type="email" class="email-2" placeholder="Email">
+            <small class="email-error-2"></small>
+            <span></span>
+          </div>
+          <div class="form-control2">
+            <input type="password" class="password-2" placeholder="Şifreniz">
+            <small class="password-error-2"></small>
+            <span></span>
+          </div>
+
+          <div class="content">
+            <div class="checkbox">
+              <input type="checkbox" name="checkbox" id="checkbox">
+              <label for="">Beni Hatırla!</label>
+            </div>
+            <div class="pass-link">
+              <a href="">Parolanızı mı unuttunuz!</a>
+            </div>
+          </div>
+          <button type="submit" value="submit"> Giriş Yap</button>
+          <span>veya hesabınızı kullanın</span>
+          <div class="social-container">
+            <a href="" class="social"><i class="fa-brands fa-facebook"></i></a>
+            <a href="" class="social"><i class="fa-brands fa-google"></i></a>
+            <a href="" class="social"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </form>
+      </div>  
+      
+      
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1 class="title">Selam</h1>
+            <p>hesabınız varsa burdan giriş yapabilirsiniz</p>
+            <p>hesabınız varsa burdan giriş yapın eğlenin</p>
+            <button class="ghost" id="login"> Giriş Yap
+            <i class="fa-solid fa-arrow-left"></i></button>
+          </div>
+
+          <div class="overlay-panel overlay-right">
+            <h1 class="title">Yeni bir <br> başlangıç</h1>
+            <p>henüz bir hesabınız yoksa bize katılın ve yolculuğa başlayın</p>
+            <button class="ghost" id="register"> Kayıt Ol
+            <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>

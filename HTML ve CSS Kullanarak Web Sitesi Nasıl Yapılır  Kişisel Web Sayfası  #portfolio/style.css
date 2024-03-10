@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
+}
+
+.hero{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: #fff;
+}
+
+.container{
+    width: 1320px;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 45px;
+}
+
+.logo{
+    color: #000;
+    font-size: 35px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.logo span{
+    color: #2373bb;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px 25px;
+}
+
+nav ul a{
+    color:#000;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+nav ul li:after{
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: #2373bb;
+    margin: auto;
+    transition-duration: .4s;
+}
+
+nav ul li:hover::after{
+    width: 100%;
+}
+
+nav ul a:hover{
+    color: #2373bb;
+    transition-duration: .4s;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    position: relative;
+    padding-top: 90px;
+}
+
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+
+.row h1{
+    color: #000;
+    font-size: 80px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.row p{
+    color: #666;
+    line-height: 1.7;
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.row a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(to left bottom, #ee0979, #fc1c62, #ff364a,#ff512f, #ff6a00);
+    padding: 10px 25px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+.row .btn{
+    background: #afacac;
+    color: #666;
+    margin-left: 20px;
+}
+
+.row a:hover{
+    transform: scale(1.1);
+    transition-duration: .4s;
+}
+
+.col-2 .dot{
+    margin-left: 50px;
+}
+
+.extra{
+    position: absolute;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    bottom: 60px;
+    right: 80px;   
+}
+
+.extra img:nth-child(1){
+    width: 130px;
+    position: absolute;
+    bottom: 0;
+    left: -100px;
+
+}
+.extra img:nth-child(2){
+    width: 460px;
+}
+.extra img:nth-child(3){
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    right: -80px;
+}

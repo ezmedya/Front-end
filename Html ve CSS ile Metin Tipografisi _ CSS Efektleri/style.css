@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,100..900&display=swap');
+:root{
+    --ff: "Anybody";
+    --bg: #232323;
+    --text: #fff;
+    --hi: #ff5449;
+}
+
+::selection{
+    background: var(--text);
+    color: var(--bg);
+}
+
+:focus, :hover{
+    outline: none;
+    color: var(--text);
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--text);
+    border: 2px solid var(--bg);
+    border-radius: 6px;
+}
+
+html{
+    font-family: var(--ff);
+    font-size: 100%;
+    block-size: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    text-rendering: optimizeSpeed;
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smothing: grayscale;
+    scrollbar-color: var(--text) transparent;
+    scrollbar-width: thin;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-weight: 400;
+    padding-block: 15vmin;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+a{
+    position: relative;
+    z-index: 2;
+    text-decoration: none;
+    color: var(--hi);
+}
+
+div{
+    font-size: clamp(2.5rem, 12.5vw, 5rem);
+    text-align: center;
+    line-height: .75;
+    text-transform: uppercase;
+    max-inline-size: 40rem;
+    margin-inline: auto;
+}
+
+div, ul{
+    display: grid;
+    list-style: none;
+}
+
+h1{
+    font-weight: inherit;
+    line-height: .65;
+    font-variation-settings: "wdth" 15;
+}
+
+li:nth-child(1){
+    font-variation-settings: "wdth" 80;
+}
+
+li:nth-child(2){
+    font-variation-settings: "wdth" 76;
+}
+
+li:nth-child(3){
+    font-variation-settings: "wdth" 58;
+}
+
+li:nth-child(3) span{
+    font-variation-settings: "wdth" 120;
+}
+
+li:nth-child(4){
+    font-variation-settings: "wdth" 66;
+}
+
+li:nth-child(5){
+    font-variation-settings: "wdth" 51;
+}
+
+li:nth-child(5) span{
+    display: block;
+    font-variation-settings: "wdth" 87;
+}
+
+li:nth-child(6){
+    font-variation-settings: "wdth" 51;
+}
+
+li:nth-child(7){
+    font-variation-settings: "wdth" 61;
+}
+
+li:nth-child(8){
+    font-variation-settings: "wdth" 93;
+}

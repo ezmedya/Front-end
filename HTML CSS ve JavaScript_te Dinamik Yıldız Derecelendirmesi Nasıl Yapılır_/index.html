@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <!-- Fontawesome CDN Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="rating-box">
+        <header>Bizi değerlendirir misin?</header>
+        <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+        </div>
+    </div>
+
+    <script>
+        const stars = document.querySelectorAll(".stars i");
+
+        stars.forEach((star, i1) => {
+            star.addEventListener("click", () => {
+                stars.forEach((star, i2) => {
+                    i1 >= i2 
+                    ? star.classList.add("active")
+                    : star.classList.remove("active")
+                });
+            });
+        });
+
+    </script>
+
+  </body>
+</html>

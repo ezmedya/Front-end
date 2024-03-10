@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- BoxIcons -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="social-buttons">
+        <a>
+            <i class="bx bxl-instagram-alt"></i>
+            <div class="bg"></div>
+        </a>
+        <a>
+            <i class="bx bxl-youtube"></i>
+            <div class="bg"></div>
+        </a>
+        <a>
+            <i class="bx bxl-twitter"></i>
+            <div class="bg"></div>
+        </a>
+        <a>
+            <i class="bx bxl-linkedin"></i>
+            <div class="bg"></div>
+        </a>
+        <a>
+            <i class="bx bxl-github"></i>
+            <div class="bg"></div>
+        </a>
+        <a>
+            <i class="bx bxl-codepen"></i>
+            <div class="bg"></div>
+        </a>
+    </div>
+
+    <script>
+        var buttons = document.querySelectorAll(".social-buttons a");
+
+        buttons.forEach(button => {
+            button.addEventListener("mousemove", e => {
+                var x = e.layerX - 60;
+                var y = e.layerY - 60;
+                var i = e.target.querySelector("i");
+                var bg = e.target.querySelector(".bg");
+
+                i.style.transform = `translate(${x / 4}px, ${y / 4}px)`;
+                bg.style.transform = `translate(${x / 8}px, ${y / 8}px)`;
+            });
+
+            button.addEventListener("mouseenter", e => {
+                var i = e.target.querySelector("i");
+                var bg = e.target.querySelector(".bg");
+
+                i.style.transition = "all .15s ease";
+                bg.style.transition = "all .15s ease";
+
+                setTimeout(() => {
+                    i.style.transition = "";
+                    bg.style.transition = "";
+                }, 150);
+            });
+
+            button.addEventListener("mouseleave", e => {
+                var i = e.target.querySelector("i");
+                var bg = e.target.querySelector(".bg");
+
+                i.style.transition = "all .25s ease";
+                bg.style.transition = "all .25s ease";
+                i.style.transform = `translate(${0}px, ${0}px)`;
+                bg.style.transform = `translate(${0}px, ${0}px)`;
+
+                setTimeout(() => {
+                    i.style.transition = "";
+                    bg.style.transition = "";
+                }, 250);
+            })
+        });
+    </script>
+</body>
+
+</html>

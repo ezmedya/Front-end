@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Swiper's -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <section>
+        <div class="swiper customSwiper container">
+            <div class="swiper-wrapper content">
+                <div class="swiper-slide card">
+                    <div class="card-content">
+                        <div class="image">
+                            <img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png" alt="" width="100">
+                        </div>
+
+                        <div class="media-icons">
+                            <i class="fab fa-facebook"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-github"></i>
+                        </div>
+
+                        <div class="name-profession">
+                            <span class="name">Ad Soyad 1</span>
+                            <span class="profession">Web Geliştiricisi</span>
+                        </div>
+
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+
+                        <div class="button">
+                            <button class="aboutMe">Hakkımda</button>
+                            <button class="hireMe">İletişim</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide card">
+                    <div class="card-content">
+                        <div class="image">
+                            <img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png" alt="" width="100">
+                        </div>
+
+                        <div class="media-icons">
+                            <i class="fab fa-facebook"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-github"></i>
+                        </div>
+
+                        <div class="name-profession">
+                            <span class="name">Ad Soyad 2</span>
+                            <span class="profession">Web Geliştiricisi</span>
+                        </div>
+
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+
+                        <div class="button">
+                            <button class="aboutMe">Hakkımda</button>
+                            <button class="hireMe">İletişim</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide card">
+                    <div class="card-content">
+                        <div class="image">
+                            <img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png" alt="" width="100">
+                        </div>
+
+                        <div class="media-icons">
+                            <i class="fab fa-facebook"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-github"></i>
+                        </div>
+
+                        <div class="name-profession">
+                            <span class="name">Ad Soyad 3</span>
+                            <span class="profession">Web Geliştiricisi</span>
+                        </div>
+
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+
+                        <div class="button">
+                            <button class="aboutMe">Hakkımda</button>
+                            <button class="hireMe">İletişim</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </section>
+
+    <script>
+        var swiper = new Swiper(".customSwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            sliderPerGroup: 3,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            }
+        });
+    </script>
+</body>
+
+</html>

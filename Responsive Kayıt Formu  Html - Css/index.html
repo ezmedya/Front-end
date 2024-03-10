@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Responsive Kayıt Formu</title>
+
+	<link rel="stylesheet" href="style.css">
+
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+	<section class="main">
+		<h1 class="title">Kayıt Formu</h1>
+		<form action="#">
+			<div class="main-box">
+				<div class="input-box">
+					<span class="text">Adınız</span>
+					<input type="text" placeholder="Adınızı giriniz..." required>
+				</div>
+
+				<div class="input-box">
+					<span class="text">Soyadınız</span>
+					<input type="text" placeholder="Soyadınızı giriniz..." required>
+				</div>
+
+				<div class="input-box">
+					<span class="text">Email</span>
+					<input type="text" placeholder="Emaili giriniz..." required>
+				</div>
+
+				<div class="input-box">
+					<span class="text">Telefon</span>
+					<input type="text" placeholder="Telefonunuzu giriniz..." required>
+				</div>
+
+				<div class="input-box">
+					<span class="text">Şifre</span>
+					<input type="password" placeholder="Şifrenizi giriniz..." required>
+				</div>
+
+				<div class="input-box">
+					<span class="text">Şifre Doğrulama</span>
+					<input type="password" placeholder="Şifrenizi doğrulayınız..." required>
+				</div>
+			</div>
+
+			<div class="container">
+				<input type="radio" name="gender" id="circle-1">
+				<input type="radio" name="gender" id="circle-2">
+				<input type="radio" name="gender" id="circle-3">
+				<span class="gender">Cinsiyet</span>
+				<div class="category">
+					<label for="circle-1">
+						<span class="circle one"></span>
+						<span class="male">Erkek</span>
+					</label>
+
+					<label for="circle-2">
+						<span class="circle two"></span>
+						<span class="male">Kadın</span>
+					</label>
+
+					<label for="circle-3">
+						<span class="circle three"></span>
+						<span class="male">Diğer</span>
+					</label>
+				</div>
+
+			</div>
+
+			<div class="btn">
+				<input type="submit" value="Kayıt Ol">
+			</div>
+
+		</form>
+	</section>
+</body>
+</html>

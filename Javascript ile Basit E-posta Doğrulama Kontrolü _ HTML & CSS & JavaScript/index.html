@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="box">
+        <h3>E-Posta Geçerlilik Kontrolü</h3>
+        <form id="form" action="#">
+            <div class="input-box">
+                <input type="text" id="email" onkeyup="validateEmail()" placeholder="E-POSTA ADRESİNİZİ GİRİNİZ.">
+                <span id="text"></span>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function validateEmail() {
+            var form = document.getElementById("form");
+            var email = document.getElementById("email").value;
+            var text = document.getElementById("text");
+
+            var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+            if (email.match(pattern)) {
+                form.classList.add("valid");
+                form.classList.remove("invalid");
+                text.innerHTML = "E-POSTA ADRESİ GEÇERLİ.";
+                text.style.color = "green";
+            } else {
+                form.classList.add("invalid");
+                form.classList.remove("valid");
+                text.innerHTML = "E-POSTA ADRESİ GEÇERLİ DEĞİL.";
+                text.style.color = "red";
+            }
+
+            if (email == "") {
+                form.classList.remove("valid");
+                form.classList.remove("invalid");
+                text.innerHTML = "";
+            }
+        }
+    </script>
+</body>
+
+</html>

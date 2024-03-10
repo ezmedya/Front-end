@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #ff634e, #fde492);
+}
+
+.box {
+    background: white;
+    padding: 15px 40px;
+    box-shadow: 15px 15px rgba(0, 0, 0, 0.1);
+}
+
+.box h3 {
+    position: relative;
+    font-size: 1.25rem;
+    color: #ccc;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.box #form {
+    position: relative;
+}
+
+.box .input-box {
+    position: relative;
+}
+
+.box #form #email {
+    width: 400px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #333;
+    color: #333;
+    padding: 10px 0;
+    font-weight: 500;
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+}
+
+#text {
+    display: block;
+    color: #999;
+    font-weight: 500;
+    padding: 5px 0;
+    letter-spacing: 0.1em;
+    font-size: 0.75em;
+}
+
+#form.invalid .input-box::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 12px;
+    width: 24px;
+    height: 24px;
+    background: url(img/invalid.png);
+    background-size: cover;
+}
+
+#form.valid .input-box::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 12px;
+    width: 24px;
+    height: 24px;
+    background: url(img/valid.png);
+    background-size: cover;
+}

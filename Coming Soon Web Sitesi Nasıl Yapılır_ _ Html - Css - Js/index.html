@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section class="container">
+    <img src="img/image.jpg" class="image">
+    <header>Web Sitemiz Yapım Aşamasında</header>
+    <p>
+      Web Sitemiz şu anda yapım aşamasında. Hazır olduğu zaman yayınlayacağız.
+    </p>
+    <div class="time-content">
+      <div class="time days">
+        <span class="number">01</span>
+        <span class="text">Gün</span>
+      </div>
+      <div class="time hours">
+        <span class="number">11</span>
+        <span class="text">Saat</span>
+      </div>
+      <div class="time minutes">
+        <span class="number">11</span>
+        <span class="text">Dakika</span>
+      </div>
+      <div class="time seconds">
+        <span class="number">1</span>
+        <span class="text">Saniye</span>
+      </div>
+    </div>
+    <div class="email-content">
+      <p>Son gelişmeler için abone ol!</p>
+
+      <div class="input-box">
+        <input type="email" placeholder="E-Posta Adresiniz" />
+        <button>Abone Ol</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    var seconds = document.querySelector(".seconds .number");
+    var minutes = document.querySelector(".minutes .number");
+    var hours = document.querySelector(".hours .number");
+    var days = document.querySelector(".days .number");
+
+    var secValue = 10;
+    var minValue = 10;
+    var hourValue = 12;
+    var dayValue = 01;
+
+    var timeFunction = setInterval(() => {
+      secValue--;
+
+      if (secValue === 0) {
+        minValue--;
+        secValue = 60;
+      }
+
+      if (minValue === 0) {
+        hourValue--;
+        minValue = 60;
+      }
+
+      if (hourValue === 0) {
+        dayValue--;
+        hourValue = 60;
+      }
+
+      if (dayValue === 0) {
+        clearInterval(timeFunction);
+      }
+
+      seconds.textContent = secValue < 10 ? `0${secValue}` : secValue;
+      minutes.textContent = minValue < 10 ? `0${minValue}` : minValue;
+      hours.textContent = hourValue < 10 ? `0${hourValue}` : hourValue;
+      days.textContent = dayValue < 10 ? `0${dayValue}` : dayValue;
+
+    }, 1000)
+
+
+  </script>
+
+</body>
+
+</html>

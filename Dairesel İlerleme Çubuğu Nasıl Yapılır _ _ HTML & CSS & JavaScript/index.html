@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="circular-progress">
+            <span class="progress-value">%0</span>
+        </div>
+
+        <span class="text">TAMAMLANDI</span>
+    </div>
+
+    <script>
+        var circularProgress = document.querySelector(".circular-progress");
+        var progressValue = document.querySelector(".progress-value");
+
+
+        var progressStartValue = 0;
+        var progressEndValue = 70;
+        var speed = 25;
+
+        var progress = setInterval(() => {
+            progressStartValue++;
+
+            progressValue.textContent = `%${progressStartValue}`
+            circularProgress.style.background = `conic-gradient(#2a63e8 ${progressStartValue * 3.6}deg, #ededed 0deg)`
+
+            if (progressStartValue == progressEndValue) {
+                clearInterval(progress);
+            }
+
+        }, speed);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="forms">
+            <div class="form login">
+                <span class="title">Giriş</span>
+
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" placeholder="E-Posta adresinizi giriniz" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Şifrenizi giriniz" required>
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
+
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="logCheck">
+                            <label for="logCheck" class="text">Beni hatırla</label>
+                        </div>
+
+                        <a href="#" class="text">Şifreni mi unuttun?</a>
+                    </div>
+
+                    <div class="input-field button">
+                        <input type="button" value="Giriş">
+                    </div>
+                </form>
+
+                <div class="login-signup">
+                    <span class="text">Üye değil misin?
+                        <a href="#" class="text signup-link">Şimdi üye ol</a>
+                    </span>
+                </div>
+            </div>
+            <div class="form signup">
+                <span class="title">Kayıt</span>
+
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" placeholder="Adınızı Giriniz">
+                        <i class="uil uil-user"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" placeholder="E-Posta Adresinizi Giriniz">
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Şifre Oluştur">
+                        <i class="uil uil-eye icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Şifreyi Onayla">
+                        <i class="uil uil-eye icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
+
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="termCon">
+                            <label for="termCon" class="text">Tüm Şartları Kabul Ediyorum.</label>
+                        </div>
+                    </div>
+
+                    <div class="input-field button">
+                        <input type="button" value="Üye Ol">
+                    </div>
+
+                    <div class="login-signup">
+                        <span class="text">
+                            Zaten üye misin?
+                            <a href="#" class="text login-link">Giriş Yap</a>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var container = document.querySelector(".container");
+        var signUp = document.querySelector(".signup-link");
+        var signIn = document.querySelector(".login-link");
+
+        signUp.addEventListener("click", () => {
+            container.classList.add("active");
+        });
+        signIn.addEventListener("click", () => {
+            container.classList.remove("active");
+        })
+    </script>
+
+</body>
+
+</html>

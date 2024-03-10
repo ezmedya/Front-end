@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/bmw1.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px 10%;
+    transition: background-image .3s;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo {
+    width: 160px;
+    cursor: pointer;
+}
+
+nav .btn {
+    text-decoration: none;
+    color: white;
+    background: #333;
+    padding: 15px 50px;
+    border-radius: 30px;
+}
+
+.content {
+    margin-top: 10%;
+}
+
+.content h2 {
+    color: red;
+    font-size: 34px;
+}
+
+.content h1 {
+    color: #222;
+    font-size: 100px;
+    margin-top: -25px;
+}
+
+.content p {
+    max-width: 380px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #555;
+}
+
+.content h3 {
+    margin-top: 30px;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.colour-select img {
+    width: 80px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+
+/* Loader */
+
+.loader_bg {
+    position: fixed;
+    z-index: 999999;
+    background: white;
+    width: 100%;
+    height: 100%;
+}
+
+.loader {
+    border: 0 solid transparent;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: calc(50vh - 75px);
+    left: calc(50vw - 75px);
+}
+
+.loader:before,
+.loader:after {
+    content: '';
+    border: 1em solid #000000;
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader 2s linear infinite;
+    opacity: 0;
+}
+
+.loader:before {
+    animation-delay: .5s;
+}
+
+@keyframes loader {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
